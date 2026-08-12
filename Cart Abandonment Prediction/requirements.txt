@@ -1,0 +1,11 @@
+fastapi==0.110.0
+uvicorn==0.28.0
+pydantic==2.6.4
+catboost==1.2.3
+pandas==2.2.1
+numpy==1.26.4
+<<<<<<< HEAD
+scikit-learn==1.4.1.post1
+=======
+scikit-learn==1.4.1.post1
+>>>>>>> eb03e2620fa979e8818e5c52c2b1ea8182d11e7a
