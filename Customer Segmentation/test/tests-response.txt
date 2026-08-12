@@ -1,0 +1,11 @@
+{
+  "purchase_rate": 0.02,
+  "cart_rate": 0.03,
+  "view_rate": 0.75,
+  "events_per_session": 1.9,
+  "products_per_session": 1.29,
+  "total_spending": 14.0,
+  "average_purchase_value": 175.0,
+  "days_since_last_activity": 77.0,
+  "activity_days": 1.0
+}
