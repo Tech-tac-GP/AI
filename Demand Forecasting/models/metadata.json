@@ -1,0 +1,37 @@
+{
+    "model_type": "XGBRegressor",
+    "task": "Product Demand Forecasting",
+    "target_variable": "purchases",
+    "expected_features": [
+        "day_of_week",
+        "is_weekend",
+        "month",
+        "views_lag_1",
+        "carts_lag_1",
+        "purchases_lag_1",
+        "views_lag_7",
+        "carts_lag_7",
+        "purchases_lag_7",
+        "views_rolling_7d_mean",
+        "carts_rolling_7d_mean",
+        "purchases_rolling_7d_mean"
+    ],
+    "handling_rules": {
+        "cold_start_days": 14,
+        "anomaly_multiplier": "Override model if views > 500% of 7-day average"
+    },
+    "feature_importance": {
+        "day_of_week": 0.01896451786160469,
+        "is_weekend": 0.0,
+        "month": 0.021822059527039528,
+        "views_lag_1": 0.027997413650155067,
+        "carts_lag_1": 0.04730113968253136,
+        "purchases_lag_1": 0.02680795080959797,
+        "views_lag_7": 0.02895365096628666,
+        "carts_lag_7": 0.026621906086802483,
+        "purchases_lag_7": 0.030919812619686127,
+        "views_rolling_7d_mean": 0.04983789846301079,
+        "carts_rolling_7d_mean": 0.6855763792991638,
+        "purchases_rolling_7d_mean": 0.03519722446799278
+    }
+}
