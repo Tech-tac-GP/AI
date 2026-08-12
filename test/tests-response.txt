@@ -1,0 +1,192 @@
+Test 1:
+
+
+{
+  "clicks": [
+    {
+      "event_time": "2021-02-01T14:00:00",
+      "event_type": "view",
+      "product_id": "1000978",
+      "category_id": "2053013552292404000",
+      "brand": "samsung",
+      "category_code": "electronics.smartphone",
+      "price": 120.50
+    },
+    {
+      "event_time": "2021-02-01T14:01:15",
+      "event_type": "cart",
+      "product_id": "1000978",
+      "category_id": "2053013552292404000",
+      "brand": "samsung",
+      "category_code": "electronics.smartphone",
+      "price": 120.50
+    },
+    {
+      "event_time": "2021-02-01T14:02:00",
+      "event_type": "purchase",
+      "product_id": "1000978",
+      "category_id": "2053013552292404000",
+      "brand": "samsung",
+      "category_code": "electronics.smartphone",
+      "price": 120.50
+    }
+  ]
+}
+
+
+Response:
+
+{
+  "abandonment_probability": 0.0012,
+  "predicted_action": "CONVERTED (Do Nothing)"
+}
+=================================================================
+Test 2:
+{
+  "clicks": [
+    {
+      "event_time": "2021-02-04T12:00:00",
+      "event_type": "view",
+      "product_id": "4500981",
+      "category_id": "2053013555563954111",
+      "brand": "msi",
+      "category_code": "computers.components.graphic_card",
+      "price": 950.00
+    },
+    {
+      "event_time": "2021-02-04T12:01:00",
+      "event_type": "cart",
+      "product_id": "4500981",
+      "category_id": "2053013555563954111",
+      "brand": "msi",
+      "category_code": "computers.components.graphic_card",
+      "price": 950.00
+    },
+    {
+      "event_time": "2021-02-04T12:01:45",
+      "event_type": "view",
+      "product_id": "4500981",
+      "category_id": "2053013555563954111",
+      "brand": "msi",
+      "category_code": "computers.components.graphic_card",
+      "price": 950.00
+    }
+  ]
+}
+
+Response:
+
+{
+  "abandonment_probability": 0.8786,
+  "predicted_action": "ABANDONED (Trigger Discount!)"
+}
+
+=================================================================
+
+Test 3:
+
+{
+  "clicks": [
+    {
+      "event_time": "2021-02-03T10:00:00",
+      "event_type": "view",
+      "product_id": "3500211",
+      "category_id": "2053013555563954000",
+      "brand": "asus",
+      "category_code": "computers.peripherals.monitor",
+      "price": 320.50
+    },
+    {
+      "event_time": "2021-02-03T10:02:00",
+      "event_type": "view",
+      "product_id": "3500211",
+      "category_id": "2053013555563954000",
+      "brand": "asus",
+      "category_code": "computers.peripherals.monitor",
+      "price": 320.50
+    },
+    {
+      "event_time": "2021-02-03T10:04:00",
+      "event_type": "cart",
+      "product_id": "3500211",
+      "category_id": "2053013555563954000",
+      "brand": "asus",
+      "category_code": "computers.peripherals.monitor",
+      "price": 320.50
+    },
+    {
+      "event_time": "2021-02-03T10:06:30",
+      "event_type": "view",
+      "product_id": "3500211",
+      "category_id": "2053013555563954000",
+      "brand": "asus",
+      "category_code": "computers.peripherals.monitor",
+      "price": 320.50
+    }
+  ]
+}
+
+Response:
+
+{
+  "abandonment_probability": 0.5614,
+  "predicted_action": "ABANDONED (Trigger Discount!)"
+}
+
+
+======================================================================
+
+
+Test 4:
+
+{
+  "clicks": [
+    {
+      "event_time": "2021-02-01T20:00:00",
+      "event_type": "view",
+      "product_id": "1004856",
+      "category_id": "2053013552292404000",
+      "brand": "xiaomi",
+      "category_code": "electronics.smartphone",
+      "price": 250.00
+    },
+    {
+      "event_time": "2021-02-01T20:02:00",
+      "event_type": "view",
+      "product_id": "1004856",
+      "category_id": "2053013552292404000",
+      "brand": "xiaomi",
+      "category_code": "electronics.smartphone",
+      "price": 250.00
+    },
+    {
+      "event_time": "2021-02-01T20:05:00",
+      "event_type": "cart",
+      "product_id": "1004856",
+      "category_id": "2053013552292404000",
+      "brand": "xiaomi",
+      "category_code": "electronics.smartphone",
+      "price": 250.00
+    },
+    {
+      "event_time": "2021-02-01T20:06:30",
+      "event_type": "view",
+      "product_id": "1004856",
+      "category_id": "2053013552292404000",
+      "brand": "xiaomi",
+      "category_code": "electronics.smartphone",
+      "price": 250.00
+    }
+  ]
+}
+
+Response:
+
+{
+  "abandonment_probability": 0.4721,
+  "predicted_action": "CONVERTED (Do Nothing)"
+}
+
+
+
+================================================================================
