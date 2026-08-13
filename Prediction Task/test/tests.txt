@@ -1,0 +1,152 @@
+Test 1: 
+
+{
+  "clicks": [
+    {
+      "event_time": "2026-08-13 10:30:00 UTC",
+      "event_type": "view",
+      "product_id": 1004249,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "apple",
+      "price": 739.52,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-08-13 10:31:15 UTC",
+      "event_type": "view",
+      "product_id": 1004249,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "apple",
+      "price": 739.52,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-08-13 10:32:45 UTC",
+      "event_type": "cart",
+      "product_id": 1004250,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "apple",
+      "price": 850.00,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    }
+  ]
+}
+
+Response:
+{
+  "intent": 1,
+  "probability": 0.69679475500645
+}
+
+
+========================================================================================
+
+
+
+
+Test 2:
+
+{
+  "clicks": [
+    {
+      "event_time": "2026-08-15 20:00:00 UTC",
+      "event_type": "view",
+      "product_id": 4804056,
+      "category_id": 2053013554658804075,
+      "category_code": "electronics.audio.headphone",
+      "brand": "apple",
+      "price": 25.50,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-08-15 20:01:00 UTC",
+      "event_type": "view",
+      "product_id": 4804056,
+      "category_id": 2053013554658804075,
+      "category_code": "electronics.audio.headphone",
+      "brand": "apple",
+      "price": 25.50,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-08-15 20:01:30 UTC",
+      "event_type": "cart",
+      "product_id": 4804056,
+      "category_id": 2053013554658804075,
+      "category_code": "electronics.audio.headphone",
+      "brand": "apple",
+      "price": 25.50,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    }
+  ]
+}
+
+
+Response:
+
+{
+  "intent": 1,
+  "probability": 0.7260866515782904
+}
+
+==============================================================================================
+
+Test 3:
+{
+  "clicks": [
+    {
+      "event_time": "2026-11-27 00:01:00 UTC",
+      "event_type": "cart",
+      "product_id": 1004249,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "xiaomi",
+      "price": 0.99,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-11-27 00:01:03 UTC",
+      "event_type": "cart",
+      "product_id": 1004249,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "xiaomi",
+      "price": 0.99,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    },
+    {
+      "event_time": "2026-11-27 00:01:06 UTC",
+      "event_type": "cart",
+      "product_id": 1004249,
+      "category_id": 2053013555631882655,
+      "category_code": "electronics.smartphone",
+      "brand": "xiaomi",
+      "price": 0.99,
+      "user_id": 515384420,
+      "user_session": "b34df435-8664-4a25-9c59-fb4d65074b1e"
+    }
+  ]
+}
+
+
+Response:
+
+{
+  "intent": 1,
+  "probability": 0.7524004531901338
+}
+
+=======================================================================================
+Test 4:
+

@@ -1,0 +1,42 @@
+{
+    "model_name": "CatBoost Intent Predictor (N=3)",
+    "optimal_threshold": 0.6,
+    "features": [
+        "view_count",
+        "cart_count",
+        "unique_products",
+        "unique_categories",
+        "unique_brands",
+        "average_price",
+        "max_price",
+        "min_price",
+        "price_range",
+        "cart_to_view_ratio",
+        "time_gap_1_2",
+        "time_gap_2_3",
+        "pre_prediction_duration_seconds",
+        "hour_sin",
+        "hour_cos",
+        "weekday_sin",
+        "weekday_cos",
+        "is_weekend",
+        "last_event_type",
+        "last_product_id",
+        "last_category_id",
+        "last_brand",
+        "last_category_l1",
+        "last_category_l2",
+        "last_category_l3",
+        "last_price_band",
+        "user_prior_sessions"
+    ],
+    "categorical_columns": [
+        "last_event_type",
+        "last_product_id",
+        "last_category_id",
+        "last_brand",
+        "last_category_l2",
+        "last_category_l3",
+        "last_price_band"
+    ]
+}
