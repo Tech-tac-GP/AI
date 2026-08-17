@@ -4,8 +4,9 @@ from api.routers import forecast
 # Initialize the application
 app = FastAPI(
     title="E-Commerce Demand Forecasting API",
-    description="Machine Learning backend for predicting product demand using XGBoost.",
-    version="1.0.0"
+    description="Machine Learning backend for predicting product demand.",
+    version="1.0.0",
+    docs_url="/" 
 )
 
 # Connect the forecasting router
