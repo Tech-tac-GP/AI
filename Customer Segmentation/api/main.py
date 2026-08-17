@@ -5,7 +5,8 @@ from src.inference.predict_segment import SegmentPredictor
 
 app = FastAPI(
     title="Customer Segmentation API",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/"
 )
 
 predictor = SegmentPredictor()
