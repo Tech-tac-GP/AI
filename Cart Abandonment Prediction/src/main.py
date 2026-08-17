@@ -6,7 +6,12 @@ from catboost import CatBoostClassifier
 
 from src.preprocessing import preprocess_session_data
 
-app = FastAPI(title="Cart Abandonment Prediction API")
+app = FastAPI(
+    title="Cart Abandonment Prediction API",
+    description="Machine Learning service to predict e-commerce cart abandonment risk.",
+    version="1.0.0",
+    docs_url="/" 
+)
 
 # Load model and metadata
 with open("models/metadata.json", "r") as f:
