@@ -10,7 +10,8 @@ from src.preprocessing import preprocess_session_data
 app = FastAPI(
     title="Purchase Prediction API",
     description="Machine Learning service to predict e-commerce purchase probability.",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/"
 )
 
 # Load Model & Metadata
