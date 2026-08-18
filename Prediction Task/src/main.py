@@ -1,28 +1,29 @@
-# src/main.py
-from fastapi import FastAPI, HTTPException
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import List, Dict
 import json
+import os
 from catboost import CatBoostClassifier
+from purchase_prediction.src.preprocessing import preprocess_session_data 
 
-from src.preprocessing import preprocess_session_data 
+# Initialize router
+router = APIRouter()
 
-app = FastAPI(
-    title="Purchase Prediction API",
-    description="Machine Learning service to predict e-commerce purchase probability.",
-    version="1.0.0",
-    docs_url="/"
-)
+# Dynamically resolve the absolute path to the purchase_prediction directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+metadata_path = os.path.join(BASE_DIR, "models", "metadata.json")
+model_path = os.path.join(BASE_DIR, "models", "catboost_model.cbm")
 
-# Load Model & Metadata
-with open("models/metadata.json", "r") as f:
+# Load Model & Metadata using dynamic paths
+with open(metadata_path, "r") as f:
     metadata = json.load(f)
-model = CatBoostClassifier().load_model("models/catboost_model.cbm")
+    
+model = CatBoostClassifier().load_model(model_path)
 
 class RawClicksPayload(BaseModel):
     clicks: List[Dict] # Expects a list of 3 click events from the frontend
 
-@app.post("/predict")
+@router.post("/predict")
 def predict(payload: RawClicksPayload):
     try:
         # Let the Data Science script format the data
