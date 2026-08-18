@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 
-# Import the routers from your sub-folders
+# Import the routers from sub-folders
 from cart_abandonment.src.main import router as cart_router
 from purchase_prediction.src.main import router as purchase_router
 from demand_forecasting.api.routers.forecast import router as forecast_router
 from customer_segmentation.api.main import router as segment_router
 
-# Initialize the one master application
+# Initialize the master application
 app = FastAPI(
     title="E-Commerce AI Suite",
     description="Unified API gateway for all machine learning microservices.",
