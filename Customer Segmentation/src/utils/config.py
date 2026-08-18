@@ -7,9 +7,6 @@ KMEANS_PATH = MODEL_DIR / "customer_segmentation_kmeans.pkl"
 SCALER_PATH = MODEL_DIR / "customer_segmentation_scaler.pkl"
 
 # IMPORTANT:
-# Replace this list with the exact 9 feature names printed by:
-# scaler.feature_names_in_
-#
 # The saved RobustScaler confirms that the trained model expects 9 features.
 SEGMENT_FEATURES = [
     "purchase_rate",
