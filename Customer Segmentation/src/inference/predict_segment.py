@@ -1,7 +1,7 @@
 import joblib
 import pandas as pd
 
-from src.utils.config import (
+from customer_segmentation.src.utils.config import (
     KMEANS_PATH,
     SCALER_PATH,
     SEGMENT_FEATURES,
