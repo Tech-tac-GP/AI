@@ -3,11 +3,11 @@ import json
 import pandas as pd
 import xgboost as xgb
 from fastapi import APIRouter, HTTPException
-from ..schemas import ForecastRequest, ForecastResponse
+from demand_forecasting.api.schemas import ForecastRequest, ForecastResponse
 
 router = APIRouter()
 
-# 1. Path Resolution
+# Path Resolution 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(os.path.dirname(CURRENT_DIR))
 
@@ -17,16 +17,16 @@ META_PATH = os.path.join(ROOT_DIR, "models", "metadata.json")
 print(f"--- SERVER STARTUP ---")
 print(f"Loading model from: {MODEL_PATH}")
 
-# 2. Load using native XGBoost Booster (Bypasses sklearn wrapper issues)
+# Load using native XGBoost Booster (Bypasses sklearn wrapper issues)
 model = xgb.Booster()
 model.load_model(MODEL_PATH)
 
 with open(META_PATH, "r") as f:
     metadata = json.load(f)
 
-print("✅ Model and metadata successfully loaded into memory!")
+print("Model and metadata successfully loaded into memory!")
 
-# 3. Prediction Endpoint
+# Prediction Endpoint
 @router.post("/predict", response_model=ForecastResponse)
 def predict_demand(request: ForecastRequest):
     try:
